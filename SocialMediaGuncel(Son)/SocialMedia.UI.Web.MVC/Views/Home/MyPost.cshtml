@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "MyPost";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+@{
+    int offset = 0;
+}
+
+@section _othercss{
+
+    <link href="~/Content/Site/css/preloader.css" rel="stylesheet" />
+
+}
+
+@section _otherscripts{
+
+    <script src="~/Scripts/jquery.form.min.js"></script>
+}
+
+
+
+@model IEnumerable<SocialMedia.DTO.Layer.Model.ShareDTO>
+
+
+@Html.Partial("partial/_userprofile", Model)
+
+@Html.Partial("partial/_post", offset)
+
+
+
+
+@Html.Partial("partial/_feed", Model)
+
+
+
+
+
+

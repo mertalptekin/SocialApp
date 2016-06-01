@@ -1,0 +1,30 @@
+﻿
+@model IEnumerable<SocialMedia.DTO.Layer.Model.ShareDTO>
+
+
+@foreach (var item in Model)
+{
+    
+<div  class="col-sm-7 col-sm-offset-4 panel panel-default">
+    <div class="panel-thumbnail"><img src="/assets/example/bg_4.jpg" class="img-responsive"></div>
+    <div class="panel-body">
+        <p class="lead">@item.Post</p>
+        <p>@item.Location</p>
+
+        <p><img src="@item.AppUser.ProfilePhotoUrl" alt="Alternate Text" /></p>
+        <span>@item.AppUser.UserName</span>
+        <p>
+            @if (item.ShareImage != null)
+            {
+                <img src="@item.ShareImage.OrginalUrl" width="200px" height="200px">
+            }else if (item.ShareVideo!=null)
+	        {
+		       <video controls>
+                   <source src="@item.ShareVideo.VideoUrl" type="audio/mp4" />
+               </video>
+	        }
+        </p>
+    </div>
+</div>
+
+}

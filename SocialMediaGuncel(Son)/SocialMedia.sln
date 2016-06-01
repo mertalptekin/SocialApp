@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.DAL", "SocialMedia.DAL\SocialMedia.DAL.csproj", "{B94ABA79-5A35-483E-ACE2-5D8B567EFCAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.BL", "SocialMedia.BL\SocialMedia.BL.csproj", "{49553E21-0089-4EAF-8259-041C4AB704DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.UI.Web.MVC", "SocialMedia.UI.Web.MVC\SocialMedia.UI.Web.MVC.csproj", "{B4CD1314-7306-4174-B106-3F6C2ADBF5B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.Common", "SocialMedia.Common\SocialMedia.Common.csproj", "{147C24C1-9D37-4CE1-A06E-58A60F98E0AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{3705F151-CEDB-4F81-BA4E-EA42564979D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.DAL.Test", "SocialMedia.DAL.Test\SocialMedia.DAL.Test.csproj", "{8380A0B3-6697-4912-AE2A-7122B98555DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.BL.Test", "SocialMedia.BL.Test\SocialMedia.BL.Test.csproj", "{B81A5AC6-5CE7-4756-AFE0-E833C2242D66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.DTO.Layer", "SocialMedia.DTO.Layer\SocialMedia.DTO.Layer.csproj", "{996D8EC5-1BA5-4868-8B1B-BA46E12EE2EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B94ABA79-5A35-483E-ACE2-5D8B567EFCAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B94ABA79-5A35-483E-ACE2-5D8B567EFCAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B94ABA79-5A35-483E-ACE2-5D8B567EFCAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B94ABA79-5A35-483E-ACE2-5D8B567EFCAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49553E21-0089-4EAF-8259-041C4AB704DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49553E21-0089-4EAF-8259-041C4AB704DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49553E21-0089-4EAF-8259-041C4AB704DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49553E21-0089-4EAF-8259-041C4AB704DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4CD1314-7306-4174-B106-3F6C2ADBF5B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4CD1314-7306-4174-B106-3F6C2ADBF5B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4CD1314-7306-4174-B106-3F6C2ADBF5B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4CD1314-7306-4174-B106-3F6C2ADBF5B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{147C24C1-9D37-4CE1-A06E-58A60F98E0AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147C24C1-9D37-4CE1-A06E-58A60F98E0AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147C24C1-9D37-4CE1-A06E-58A60F98E0AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147C24C1-9D37-4CE1-A06E-58A60F98E0AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8380A0B3-6697-4912-AE2A-7122B98555DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8380A0B3-6697-4912-AE2A-7122B98555DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8380A0B3-6697-4912-AE2A-7122B98555DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8380A0B3-6697-4912-AE2A-7122B98555DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B81A5AC6-5CE7-4756-AFE0-E833C2242D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81A5AC6-5CE7-4756-AFE0-E833C2242D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81A5AC6-5CE7-4756-AFE0-E833C2242D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81A5AC6-5CE7-4756-AFE0-E833C2242D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{996D8EC5-1BA5-4868-8B1B-BA46E12EE2EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{996D8EC5-1BA5-4868-8B1B-BA46E12EE2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{996D8EC5-1BA5-4868-8B1B-BA46E12EE2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{996D8EC5-1BA5-4868-8B1B-BA46E12EE2EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8380A0B3-6697-4912-AE2A-7122B98555DD} = {3705F151-CEDB-4F81-BA4E-EA42564979D1}
+		{B81A5AC6-5CE7-4756-AFE0-E833C2242D66} = {3705F151-CEDB-4F81-BA4E-EA42564979D1}
+	EndGlobalSection
+EndGlobal

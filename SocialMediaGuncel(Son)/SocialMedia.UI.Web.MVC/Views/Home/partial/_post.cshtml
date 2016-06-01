@@ -1,0 +1,96 @@
+﻿@model int
+
+
+
+
+<div class="col-sm-9  col-sm-offset-@Model">
+    <div class="well">
+
+        @* html helper *@
+        @using (Html.BeginForm("AddShare","Home",FormMethod.Post, new { enctype = "multipart/form-data",@class="frm-submit",@role="form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(false)
+            <div class="form-group" style="padding:14px;">
+                @Html.TextArea("Post",new {@placeholder= "Update your status",@class= "form-control" })
+            </div>
+            <input class="btn btn-primary pull-right" type="submit" name="" value="Post" />
+            <ul class="list-inline">
+                <li>
+                    <a id="media-button" href="javascript:TriggerFile()">
+                        <i class="glyphicon glyphicon-camera"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><i class="glyphicon glyphicon-map-marker"></i></a>
+                </li>
+            </ul>
+            <input id="media" class="form-control" style="display:none;" type="file" accept="video/*,image/*" name="media" value="" />
+
+        }
+
+        @*<form action="/Home/AddPost/" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(false)
+            <h4>What's New</h4>
+            <div class="form-group" style="padding:14px;">
+                <textarea class="form-control"  name="Post" placeholder="Update your status"></textarea>
+            </div>
+            <input class="btn btn-primary pull-right" type="submit" name="" value="Post" />
+            <ul class="list-inline">
+                <li>
+                    <a id="media-button" href="">
+                        <i class="glyphicon glyphicon-camera"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><i class="glyphicon glyphicon-map-marker"></i></a>
+                </li>
+            </ul>
+            <input class="form-control" type="file" accept="video/*,image/*" name="media" value="" />
+        </form>*@
+    </div>
+</div>
+
+<div class="hide-default" id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div id="object"></div>
+        </div>
+    </div>
+
+</div>
+
+<div id="feed-json">
+
+</div>
+
+
+<script>
+
+   
+
+    function TriggerFile() {
+        $('#media').trigger("click");
+        
+    }
+
+
+    $('.frm-submit').ajaxForm({
+        success: function (response) {
+
+            $('#feed-json').append('<div  class="col-sm-7 col-sm-offset-4 panel panel-default"><div class="panel-thumbnail"><img src="/assets/example/bg_4.jpg" class="img-responsive"></div><div class="panel-body"><p class="lead">'+response.Post+'</p><p>'+response.Location+'</p><p><img src="'+response.AppUser.ProfilePhotoUrl+'" alt="Alternate Text" /></p><span>'+response.AppUser.UserName+'</span><p><img src="'+response.ShareImage.OrginalUrl+'" width="200px" height="200px"><video controls><source src="'+response.ShareVideo.VideoUrl+'" type="audio/mp4" /></video></p></div></div>');
+        },
+        beforeSubmit: function () {
+            $("#loading").removeClass("hide-default").addClass("show-default");
+            //$("#" + loading).removeClass("hide-default").addClass("show-default");
+        },
+        complete: function () {
+            $("#loading").removeClass("show-default").addClass("hide-default");
+        }
+    })
+
+
+
+
+</script>
